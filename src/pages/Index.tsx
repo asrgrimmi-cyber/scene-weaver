@@ -2,8 +2,11 @@ import { SplineScene } from "@/components/ui/splite";
 import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-background p-4">
       <Card className="w-full max-w-5xl h-[500px] bg-black/[0.96] relative overflow-hidden">
@@ -23,10 +26,17 @@ const Index = () => {
               emulation tools designed for speed and precision.
             </p>
             <div className="mt-6 flex gap-4">
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6">
+              <Button
+                onClick={() => navigate("/ue-sim")}
+                className="bg-primary text-primary-foreground font-semibold px-6 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)]"
+              >
                 UE Sim
               </Button>
-              <Button variant="outline" className="border-neutral-600 text-neutral-200 hover:bg-neutral-800 font-semibold px-6">
+              <Button
+                onClick={() => navigate("/network-emulator")}
+                variant="outline"
+                className="border-neutral-600 text-neutral-200 font-semibold px-6 transition-all duration-300 hover:scale-105 hover:bg-neutral-800 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+              >
                 Network Emulator
               </Button>
             </div>
