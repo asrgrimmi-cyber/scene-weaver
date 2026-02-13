@@ -1,6 +1,7 @@
 import { SplineScene } from "@/components/ui/splite";
 import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
@@ -18,9 +19,17 @@ const Index = () => {
               Simnovus product builder
             </h1>
             <p className="mt-4 text-neutral-300 max-w-lg">
-              Bring your UI to life with beautiful 3D scenes. Create immersive
-              experiences that capture attention and enhance your design.
+              Build, simulate, and test next-gen telecom solutions with powerful
+              emulation tools designed for speed and precision.
             </p>
+            <div className="mt-6 flex gap-4">
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6">
+                UE Sim
+              </Button>
+              <Button variant="outline" className="border-neutral-600 text-neutral-200 hover:bg-neutral-800 font-semibold px-6">
+                Network Emulator
+              </Button>
+            </div>
           </div>
 
           {/* Right content */}
