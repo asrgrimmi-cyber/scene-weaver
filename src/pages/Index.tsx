@@ -28,7 +28,7 @@ const Index = () => {
             <div className="mt-6 flex gap-4">
               <Button
                 onClick={() => navigate("/ue-sim")}
-                className="bg-primary text-primary-foreground font-semibold px-6 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)]"
+                className="bg-orange-500 text-white font-semibold px-6 transition-all duration-300 hover:scale-105 hover:bg-orange-600 hover:shadow-[0_0_20px_rgba(249,115,22,0.5)]"
               >
                 UE Sim
               </Button>
