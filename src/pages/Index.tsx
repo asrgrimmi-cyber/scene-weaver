@@ -25,7 +25,13 @@ const Index = () => {
               Build, simulate, and test next-gen telecom solutions with powerful
               emulation tools designed for speed and precision.
             </p>
-            <div className="mt-6 flex gap-4">
+            <div className="mt-6 flex flex-wrap gap-4">
+              <Button
+                onClick={() => navigate("/impact-cards")}
+                className="bg-primary text-primary-foreground font-semibold px-6 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_hsl(0_72%_51%/0.5)]"
+              >
+                Impact Cards
+              </Button>
               <Button
                 onClick={() => navigate("/ue-sim")}
                 className="bg-orange-500 text-white font-semibold px-6 transition-all duration-300 hover:scale-105 hover:bg-orange-600 hover:shadow-[0_0_20px_rgba(249,115,22,0.5)]"
