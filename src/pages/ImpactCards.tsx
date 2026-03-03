@@ -1,14 +1,11 @@
 import { useState, useCallback } from "react";
-import { ArrowLeft, Layers } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { Layers } from "lucide-react";
 import OKRHeader from "@/components/impact/OKRHeader";
 import FlashCard from "@/components/impact/FlashCard";
 import GCSSidebar from "@/components/impact/GCSSidebar";
 import { motion } from "framer-motion";
 
 const ImpactCards = () => {
-  const navigate = useNavigate();
   const [okrData, setOkrData] = useState({
     objective: "",
     keyResults: ["", "", ""] as [string, string, string],
@@ -24,23 +21,11 @@ const ImpactCards = () => {
       {/* Top Bar */}
       <header className="border-b border-border bg-card/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => navigate("/")}
-              className="text-muted-foreground hover:text-foreground font-mono text-xs"
-            >
-              <ArrowLeft className="w-3.5 h-3.5 mr-1" />
-              Back
-            </Button>
-            <div className="w-px h-5 bg-border" />
-            <div className="flex items-center gap-2">
-              <Layers className="w-4 h-4 text-primary" />
-              <h1 className="font-mono text-sm font-bold tracking-wider uppercase">
-                Impact Cards
-              </h1>
-            </div>
+          <div className="flex items-center gap-2">
+            <Layers className="w-4 h-4 text-primary" />
+            <h1 className="font-mono text-sm font-bold tracking-wider uppercase">
+              Impact Cards
+            </h1>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse-dot" />

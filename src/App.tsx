@@ -3,9 +3,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import UESim from "./pages/UESim";
-import NetworkEmulator from "./pages/NetworkEmulator";
 import ImpactCards from "./pages/ImpactCards";
 import NotFound from "./pages/NotFound";
 
@@ -18,10 +15,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/ue-sim" element={<UESim />} />
-          <Route path="/network-emulator" element={<NetworkEmulator />} />
-          <Route path="/impact-cards" element={<ImpactCards />} />
+          <Route path="/" element={<ImpactCards />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
